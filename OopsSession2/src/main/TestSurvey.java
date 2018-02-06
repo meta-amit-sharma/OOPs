@@ -86,13 +86,6 @@ public class TestSurvey {
 		question.put("4","0%");
 		question.put("5","0%");
 		expected.put(1,(LinkedHashMap<String, String>)question.clone());
-		question.clear();
-		question.put("1","66%");
-		question.put("2","33%");
-		question.put("3","0%");
-		question.put("4","0%");
-		question.put("5","0%");
-		expected.put(2, (LinkedHashMap<String, String>)question.clone());
 		i=1;
 		for(Question q : questionList){
 			if(q.getType().equalsIgnoreCase("single")){
