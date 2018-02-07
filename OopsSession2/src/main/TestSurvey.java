@@ -95,5 +95,21 @@ public class TestSurvey {
 		/*Checks if the final answer is true*/
 		assertTrue(expected.equals(actual));
 	}
+	@Test
+	/**
+	 * This function checks the sorting functionality
+	 */
+	public void testSortSuccess() {
+		SortQuestion s = new SortQuestion();
+		questionList = s.sortQuestion(questionList);
+		List <String> actual = new ArrayList<String>();
+		List <String> expected = new ArrayList<String>();
+		for(Question q : questionList){
+			actual.add(q.getType() + ", " + q.getQuestion() + ", " +q.getQuestionOptions());
+		}
+		expected.addAll(Arrays.asList("multi, Areas of improvement, Service Quality/Communication/Delivery Process",
+									  "single, overall rating, 1/2/3/4/5","text, Trainne Feedback, null"));
+		assertEquals(expected,actual);
+	}
 
 }
