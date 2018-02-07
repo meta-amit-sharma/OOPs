@@ -49,7 +49,7 @@ public class TestSurvey {
 	 * This function simulates the test given by the participants
 	 * it also calculates the result and compares it with the expected result
 	 */
-	public void passTest() {
+	public void test() {
 		String[] arr1 = new String[] {"1","communication","feedback"};							//Answers by 1st participant
 		String[] arr2 = new String[] {"2","communication/Delivery Process","feedback correct"};	//Answers by 2nd participant		
 		String[] arr3 = new String[] {"2","communication/Delivery Process","feedback given"};	//Answers by 3rd participant
@@ -99,7 +99,7 @@ public class TestSurvey {
 	/**
 	 * This function checks the sorting functionality
 	 */
-	public void testSortSuccess() {
+	public void test1() {
 		SortQuestion s = new SortQuestion();
 		questionList = s.sortQuestion(questionList);
 		List <String> actual = new ArrayList<String>();
